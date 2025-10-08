@@ -31,7 +31,7 @@ body {
     font-family: var(--body-font);
     background-color: var(--white-color);
     transition: .5s;
-    background: url('https://i.postimg.cc/HW2MmR3p/ken-cheung-Kon-WFWUa-Auk-unsplash.jpg') no-repeat;
+    /* background: url('https://i.postimg.cc/HW2MmR3p/ken-cheung-Kon-WFWUa-Auk-unsplash.jpg') no-repeat; */
     background-size: cover;
     background-position: center;
     height: 100vh;
