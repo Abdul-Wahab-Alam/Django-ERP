@@ -1,14 +1,28 @@
 from django.shortcuts import render
-from .models import Products
+from .models import *
 # Create your views here.
-def inventory_index(request):
-    return render(request,'index.html')
+
+def home(request):
+    return render(request,'inv_home.html')
 
 def create_product(request):
+    
     if request.method == 'POST':
-        product_name = request.POST.get('product_name')
-        product_price = request.POST.get('product_price')
+        name = request.POST.get('name')
+        category_id = request.POST.get('category')
+        price = request.POST.get('price')
+        quantity = request.POST.get('quantity')
 
-        if product_name and product_price:
-            Products.objects.create(product_name=product_name, product_price=product_price)
-    return render(request,'create_product.html')
+
+        category = Category.objects.get_or_create(id=category_id) if category_id else None
+
+        product = Product.objects.create(
+            product_name = name,
+            product_category = category,
+            product_price = price,
+            product_qty = quantity,
+        )
+
+    categories = Category.objects.all()
+
+    return render(request,'create_product.html',{'categories':categories})

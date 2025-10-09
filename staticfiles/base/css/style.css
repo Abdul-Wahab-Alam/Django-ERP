@@ -31,7 +31,7 @@ body {
     font-family: var(--body-font);
     background-color: var(--white-color);
     transition: .5s;
-    background: url('https://i.postimg.cc/HW2MmR3p/ken-cheung-Kon-WFWUa-Auk-unsplash.jpg') no-repeat;
+    /* background: url('https://i.postimg.cc/HW2MmR3p/ken-cheung-Kon-WFWUa-Auk-unsplash.jpg') no-repeat; */
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -73,7 +73,13 @@ a { text-decoration: none; }
     padding: 0.5rem;
 }
 
-.nav-logo-icon { margin-right: 1.2rem; }
+.nav-logo-icon { 
+    margin-right: 1.2rem; 
+    width: 120px; 
+    /* height: 150px; */
+    /* object-fit: contain;  */
+
+}
 .nav-logo-text { color: var(--white-color); font-weight: var(--font-bold); }
 
 .nav-toggle {
